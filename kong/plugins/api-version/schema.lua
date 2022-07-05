@@ -1,7 +1,7 @@
 local typedefs = require "kong.db.schema.typedefs"
 
 
-local PLUGIN_NAME = "myplugin"
+local PLUGIN_NAME = "api-version"
 
 
 local schema = {
@@ -20,7 +20,7 @@ local schema = {
               default = "Hello-World" } },
           { response_header = typedefs.header_name {
               required = true,
-              default = "Bye-World" } },
+              default = "Version" } },
           { ttl = { -- self defined field
               type = "integer",
               default = 600,
